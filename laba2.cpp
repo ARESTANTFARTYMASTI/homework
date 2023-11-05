@@ -4,6 +4,9 @@
 
 #include <algorithm>
 
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 
@@ -143,6 +146,7 @@ void mediana(int sr1, int sr2,vector<int>&ball,vector<int>&ball_sort){
         vector<int>ball;//вектор баллов учеников
 
         vector<int>ball_sort;//вектор отсортированых баллов
+        vector<string> baza_name{"Вася","Дима","Калыван","Гера","Фер","Бади","Савва","Сергей","Макс","Миша","Ильяс","Вова","Витяй","Радик","Леха","Саня"};
 
 
 
@@ -183,8 +187,25 @@ void mediana(int sr1, int sr2,vector<int>&ball,vector<int>&ball_sort){
         
 
         if (fun == 2) {
+            
+            vector<int>ball(10);
+            vector<string>name(0);
 
-            cout<<" к сожалению эту часть программы я не смог реализовать :()"<<endl;
+            srand(time(0));
+            for(int i=0;i<ball.size();i++){
+                ball[i]=rand()%101;//генерация рандомного балла от 0 до 100
+                name.push_back(baza_name[rand()%17]);//генирация рандомного индекса из базы имен чтобы били рандомные имена
+                
+                
+            }
+            cout_vecctor(name, ball);
+
+            
+
+            sr_ar_vec(ball, summ);
+
+            mediana(sr1,sr2,ball,ball_sort);
+
 
 
 
