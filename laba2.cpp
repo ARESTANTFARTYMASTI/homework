@@ -66,15 +66,15 @@ void mediana(int sr1, int sr2,vector<int>&ball,vector<int>&ball_sort){
 
     for(int i=0;i<ball.size();i++){
 
-        ball_sort.push_back(ball[i]);
+        ball_sort.push_back(ball[i]);//копирую вектор балов в свободный вектор 
 
     }
 
-    sort(ball_sort.begin(),ball_sort.end());
+    sort(ball_sort.begin(),ball_sort.end());//сортирую копированый вектор баллов
 
     if(ball.size()%2==0){
 
-        sr1=ball_sort[(ball.size()/2)-1];
+        sr1=ball_sort[(ball.size()/2)-1];//проверяю чётный ли вектор ,если чётный то выявляю два элемента по середине и ищю их среднее арефметическое
 
         sr2=ball_sort[ball.size()/2];
 
@@ -162,7 +162,7 @@ void mediana(int sr1, int sr2,vector<int>&ball,vector<int>&ball_sort){
 
             vector<string>name{"Вася","Дима","Леонид","Калыван","Саня","Гера","Ильяс","Семен","Бади","Фер"};
 
-            vector<int>ball{1,2,3,4,5,6,7,8,9,10};
+            vector<int>ball{22,45,30,76,52,6,79,68,9,90};
 
             cout_vecctor(name, ball);
 
